@@ -91,6 +91,7 @@ Importante:
 
 ## 📂 Estructura del proyecto
 
+```
 ├── app.module.ts
 ├── main.ts
 ├── common
@@ -116,6 +117,7 @@ Importante:
 │   └── user‐subscription
 └── tests
     └── … (specs)
+```
 
 ## 🛠️ Endpoints Destacados (v1)
 **Health Check**
