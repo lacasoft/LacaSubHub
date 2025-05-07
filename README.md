@@ -11,8 +11,6 @@ Una API construida con NestJS para gestionar usuarios y suscripciones con pagos 
 - Límite de peticiones (Throttler)
 - Autenticación por API Key y JWT
 
----
-
 ## 📋 Características principales
 
 - **Usuarios**: creación
@@ -29,8 +27,6 @@ Una API construida con NestJS para gestionar usuarios y suscripciones con pagos 
   - API Key Guard y JWT Guard
 - **Webhooks** configurados en `/api/v1/webhooks/stripe` y `/api/v1/webhooks/paypal`
 
----
-
 ## 🚀 Requisitos
 
 - Node.js ≥ 16.x
@@ -38,8 +34,6 @@ Una API construida con NestJS para gestionar usuarios y suscripciones con pagos 
 - PostgreSQL (u otro RDBMS compatible con TypeORM)
 - Claves de Stripe y PayPal
 - API Key para llamadas protegidas
-
----
 
 ## ⚙️ Configuración de variables de entorno
 
@@ -89,12 +83,13 @@ PAYPAL_WEBHOOK_ID=…
 BANK_ACCOUNT_NAME=LACA-SOFT
 BANK_ACCOUNT_NUMBER=0123-456-7890123456
 
-    Importante:
+Importante:
 
-        Ajusta APP_PROD, DB_SYNC, DB_LOGGIN y DB_SSL según tu entorno.
-        Asegúrate de proteger bien los secretos (SECRET_KEY, CLIENT_ID, etc.) y no subir tu .env al repositorio.
+    Ajusta APP_PROD, DB_SYNC, DB_LOGGIN y DB_SSL según tu entorno.
+    Asegúrate de proteger bien los secretos (SECRET_KEY, CLIENT_ID, etc.) y no subir tu .env al repositorio.
+```
 
-📂 Estructura del proyecto
+## 📂 Estructura del proyecto
 
 ├── app.module.ts
 ├── main.ts
@@ -122,64 +117,52 @@ BANK_ACCOUNT_NUMBER=0123-456-7890123456
 └── tests
     └── … (specs)
 
-🛠️ Endpoints Destacados (v1)
-Health Check
+## 🛠️ Endpoints Destacados (v1)
+**Health Check**
 
     GET /api/v1/health
 
-Usuarios
+**Usuarios**
 
     POST /api/v1/users
-
     GET /api/v1/users
 
-Suscripciones
+**Suscripciones**
 
     GET /api/v1/subscriptions
 
-Pagos
+**Pagos**
 
     POST /api/v1/payments/links
     Genera links de pago (Stripe, PayPal, transferencia)
-
     POST /api/v1/payments/orders/{orderId}/capture
     Captura un pago de orden (Stripe)
-
     POST /api/v1/payments/refund/{paymentId}
     Reembolso de un pago
 
-Webhooks
+**Webhooks**
 
     POST /api/v1/webhooks/stripe
     POST /api/v1/webhooks/paypal
 
-🔒 Seguridad
+## 🔒 Seguridad
 
     Helmet aplicado globalmente para cabeceras seguras.
     ThrottlerModule con rate limiting configurable.
     API Key Guard: revisa x-api-key en cabeceras.
     JWT Guard para rutas protegidas.
 
-📜 Documentación Swagger
+## 📜 Documentación Swagger
 
-Si quieres explorar la API con Swagger, añade en main.ts:
+    Accede a http://localhost:3000/api/docs.
 
-const config = new DocumentBuilder()
-  .setTitle('SUBCRIPTION SYSTEM by LACA-SOFT API')
-  .setVersion('1.0')
-  .addBearerAuth()
-  .build();
-const document = SwaggerModule.createDocument(app, config);
-SwaggerModule.setup('api/docs', app, document);
+## 🧪 Tests
 
-Accede luego a http://localhost:3000/api/docs.
-🧪 Tests
+    npm run test
+    o
+    yarn test
 
-npm run test
-# o
-yarn test
-
-🤝 Contribuciones
+## 🤝 Contribuciones
 
     Haz un fork del repositorio
     Crea una rama feature: git checkout -b feature/nueva-funcionalidad
@@ -187,6 +170,6 @@ yarn test
     Push a tu rama: git push origin feature/nueva-funcionalidad
     Abre un Pull Request
 
-📄 Licencia
+## 📄 Licencia
 
-MIT © LACA-SOFT
+MIT © ***LACA-SOFT***
