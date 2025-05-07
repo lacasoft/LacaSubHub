@@ -1,0 +1,78 @@
+# Dependency directories
+node_modules/
+.pnp
+.pnp.js
+
+# Build and distribution directories
+dist/
+build/
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Coverage directories
+coverage/
+.nyc_output/
+
+# IDE specific files
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Cache directories
+.cache/
+.temp/
+.tmp/
+
+# Debug files
+*.pid
+*.seed
+*.pid.lock
+
+# Test files
+/test-results/
+/junit.xml
+
+# NestJS specific
+*.ormconfig.json
+ormconfig.json
+ormconfig.*.json
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Package manager specific
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Documentation
+/docs/
