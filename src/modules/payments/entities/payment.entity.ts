@@ -4,11 +4,13 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  Index,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
 
 @Entity({ name: 'payments' })
+@Index(['provider', 'providerOrderId'], { unique: true })
 export class PaymentEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
